@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+p::selection {
+    background: #600000;
+    color: #FFF;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: fixed; */
+    background: linear-gradient(to right, #700000, #300000);
+    /* box-shadow: #000000 4px 4px 5px; */
+    width: 100%;
+    /* height: 80px; */
+}
+
+.logo {
+    /* background-color: rebeccapurple; */
+    padding: 5px 10px;
+}
+
+nav h1 {
+    color: rgb(255, 255, 255);
+    text-shadow: black 2.5px 2.5px 3px;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.4;
+    transition: all 1s ease 0s;
+    text-shadow: black 4px 4px 4px;
+    /* background-color: red; */
+}
+
+.blood-shadow:hover {
+    cursor: pointer;
+    color: rgba(192, 192, 192, 0.788);
+    text-shadow:
+        4px 4px 1px #300000,
+        4px 6px 1px #400000,
+        4px 8px 1px #500000,
+        4px 10px 1px #600000,
+        4px 12px 1px #700000,
+        4px 14px 1px #800000,
+        4px 16px 1px #900000,
+        4px 18px 1px #A00000,
+        4px 20px 1px #B00000,
+        4px 22px 1px #C00000,
+        4px 24px 1px #D00000,
+        4px 26px 1px #E00000,
+        4px 28px 1px #F00000,
+        4px 30px 1px #FA0000,
+        4px 32px 1px #FB0000,
+        4px 34px 1px #FC0000,
+        4px 36px 1px #FD0000,
+        4px 38px 1px #FE0000,
+        4px 40px 2px #FF0000;
+}
+
+.laptop-nav-links {
+    display: none;
+}
+
+.nav-links ul .laptop-nav-links{
+    /* gap: 50px; */
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+/* ************ Sliding navBar Starts ************** */
+
+.nav-collapse-container {
+    /* display: none; */
+    z-index: 1;
+}
+
+.nav-collapse {
+    color: #FFF;
+    /* font-size: 1.5rem; */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.nav-collapse:hover {
+    background-color: #535353;
+    cursor: pointer;
+}
+
+
+.nav-open-icon {
+    /* margin-top: -4px; */
+    /* background-color: red; */
+    width: 20px;
+    height: 30px;
+}
+
+.nav-collapse-icon {
+    width: 20px;
+    height: 30px;
+}
+
+.on-click-nav-collapse {
+    opacity: 0;
+    position: absolute;
+    top: -300px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: #282828;
+    cursor: pointer;
+    transition: all 1s ease;
+    z-index: -5;
+}
+
+.on-click-nav-collapse-show {
+    opacity: 1;
+    transform: translateY(355px);
+}
+
+.on-click-nav-collapse ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.on-click-nav-collapse ul .collapse-items {
+    background-color: #300000;
+    align-items: center;
+    padding: 8px 0px 8px 0px;
+    width: 100%;
+    border-radius: 2px;
+    color: #FFF;
+    fill: #FFF;
+    font-size: 14px;
+    transition: all 0.5s ease;
+
+}
+
+.on-click-nav-collapse ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+
+
+.on-click-nav-collapse ul .collapse-items:hover {
+    background-color: #500000;
+    color: #FFF;
+    fill: #FFF;
+}
+
+
+.nav-links ul {
+    display: flex;
+}
+
+/* ************ Sliding navBar Finished ************** */
+
+/* *************** MAIN BODY STARTS ***************** */
+.main {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    /* margin-top: -60px; */
+    /* background-image: linear-gradient(#200000, #500000); */
+    /* background-image: url(assets/img/DeathNoteBgPhone.jpg) ; */
+    /* background: url("https://img5.goodfon.com/wallpaper/nbig/d/70/light-yagami-death-note-paren-tetrad.jpg") -200px 0px; */
+    background: url("https://s1.zerochan.net/Yagami.Light.600.3476362.jpg") -100px 0px;
+    /* background-repeat: no-repeat; */
+    /* z-index: -100; */
+
+}
+
+.card-container {
+    margin: 10px 10px;
+    /* background-color: #300000; */
+    /* z-index: 50; */
+}
+
+.card-container .card {
+    border-radius: 10px;
+    transition: all 1s ease;
+    margin-bottom: 20px;
+}
+
+#card1 {
+    background: linear-gradient(150deg, #0000 20.55%, #8f6f46b6 94.17%);
+    background-color: #400000bb;
+    backdrop-filter: blur(4px);
+    box-shadow: 4px 4px 5px #2000009a;
+}
+
+#card1:hover {
+    /* background: linear-gradient(to bottom, rgba(143, 111, 70, 0.2), rgba(143, 111, 70, 0.6)) 0px -500px; */
+    background-color: #40000081;
+    border-radius: 10px;
+}
+
+#card2 {
+    background: linear-gradient(150deg, #0000 20.55%, #134558b6 94.17%);
+    background-color: #adad95bb;
+    backdrop-filter: blur(4px);
+    box-shadow: 4px 4px 5px #2000009a;
+}
+
+#card2:hover {
+    /* background: linear-gradient(to bottom, rgba(143, 111, 70, 0.2), rgba(143, 111, 70, 0.6)) 0px -500px; */
+    background-color: #adad9581;
+    border-radius: 10px;
+}
+
+#card3 {
+    background: linear-gradient(150deg, #0000 20.55%, #700000b9 94.17%);
+    background-color: #d88863bb;
+    backdrop-filter: blur(4px);
+    box-shadow: 4px 4px 5px #2000009a;
+}
+
+#card3:hover {
+    background-color: #d8886381;
+}
+
+#card4 {
+    background: linear-gradient(150deg, #0000 20.55%, #000000c4 94.17%);
+    background-color: #a79dadb2;
+    backdrop-filter: blur(4px);
+    box-shadow: 4px 4px 5px #2000009a;
+}
+
+#card4:hover {
+    background-color: #a79dad91;
+}
+
+#card5 {
+    background: linear-gradient(150deg, #0000 20.55%, #180000de 94.17%);
+    background-color: #420000de;
+    backdrop-filter: blur(4px);
+    box-shadow: 4px 4px 5px #2000009a;
+}
+
+#card5:hover {
+    background-color: #df111181;
+}
+
+#card6 {
+    background: linear-gradient(150deg, #0000 20.55%, #6b6b6bd8 94.17%);
+    background-color: #872bc5b2;
+    backdrop-filter: blur(4px);
+    box-shadow: 4px 4px 5px #2000009a;
+}
+
+#card6:hover {
+    background-color: #872bc581;
+}
+
+#card7 {
+    background: linear-gradient(150deg, #0000 20.55%, #000000b6 94.17%);
+    background-color: #d65600b6;
+    backdrop-filter: blur(4px);
+    box-shadow: 4px 4px 5px #2000009a;
+}
+
+#card7:hover {
+    background-color: #d6560081;
+}
+
+#card8 {
+    background: linear-gradient(150deg, #0000 20.55%, #643053b6 94.17%);
+    background-color: #502020b6;
+    backdrop-filter: blur(4px);
+    box-shadow: 4px 4px 5px #2000009a;
+}
+
+#card8:hover {
+    background-color: #50202081;
+}
+
+#card9 {
+    background: linear-gradient(150deg, #0000 20.55%, #000000c4 94.17%);
+    background-color: #5e0000c4;
+    backdrop-filter: blur(4px);
+    box-shadow: 4px 4px 5px #2000009a;
+}
+
+#card9:hover {
+    background-color: #5e000081;
+}
+
+
+.card .card-img {
+    /* background-color: #701919; */
+    /* float: left; */
+    width: 120px;
+    height: 120px;
+    /* height:fit-content; */
+    margin: 10px;
+    box-shadow: 4px 4px 5px #2000009a;
+    cursor: pointer;
+}
+
+.left-img {
+    float: left;
+}
+
+.right-img {
+    float: right;
+}
+
+.card .card-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card .card-description p {
+    color: #FFF;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.footer-container {
+    background: url(https://wallpapercave.com/wp/24ZxPwd.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 260px;
+}
+
+/* .footer-styling{
+    margin-top: 500px;
+} */
+
+.footer {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-links ul {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links ul li a {
+    color: #FFF;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #c42020;
+    letter-spacing: 5px;
+}
+
+
+
+/* %%%%%%%%%%%%%%%%%% MEDIA QUERIES for screen larger that mobile %%%%%%%%%%%%%%% */
+
+/* ********* Styles for tablets go here ******* */
+@media screen and (min-width: 768px) {
+    .nav-collapse-container {
+        display: block;
+    }
+    .main {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        background: url("https://images6.alphacoders.com/332/332761.jpg") -500px 0px;
+        /* background-repeat: no-repeat; */
+    }
+
+    .card-container {
+        margin: 10px 60px;
+        /* background-color: #300000; */
+        /* z-index: 50; */
+    }
+
+    .card {
+        height: 260px;
+    }
+
+    .card .card-img {
+        /* background-color: #701919; */
+        width: 140px;
+        height: 140px;
+        /* height:fit-content; */
+        margin: 10px;
+        box-shadow: 4px 4px 5px #2000009a;
+        cursor: pointer;
+    }
+
+    .card .card-description {
+        height: 100%;
+        align-items: center;
+    }
+
+    .card .card-description p {
+        color: #ffffff;
+        margin: 10px;
+        font-size: 17px;
+    }
+
+    #card2 {
+        background-color: #80806ccb;
+    }
+
+
+
+    .footer-container {
+        height: 400px;
+    }
+
+    .footer {
+        padding-top: 140px;
+    }
+
+
+    .footer-links ul li a {
+        font-size: 18px;
+    }
+
+    .footer-links ul li a:hover {
+        letter-spacing: 10px;
+    }
+}
+
+/* ********** queries for laptops goes here ************* */
+@media screen and (min-width: 1024px) {
+    .nav-collapse-container {
+        display: none;
+    }
+
+    .laptop-nav-links{
+        display: block;
+    }
+
+    .nav-links {
+        width: 50%;
+        margin-right: 30px;
+    }
+
+    .nav-links ul{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 50px;
+        /* margin-right: 40px; */
+    }
+
+
+    .nav-links ul li a{
+        color: #FFF;
+        text-decoration: none;
+        transition: all 0.5s ease;
+    }
+
+    .nav-links ul li a:hover{
+        letter-spacing: 2px;
+    }
+
+    .main {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        background: url("https://images6.alphacoders.com/332/332761.jpg") -500px 0px;
+        /* background-repeat: no-repeat; */
+    }
+
+    .card-container {
+        margin: 10px 60px;
+        /* background-color: #300000; */
+        /* z-index: 50; */
+    }
+
+    .card {
+        height: 160px;
+    }
+
+    .card .card-img {
+        /* background-color: #701919; */
+        width: 140px;
+        height: 140px;
+        /* height:fit-content; */
+        margin: 10px;
+        box-shadow: 4px 4px 5px #2000009a;
+        cursor: pointer;
+    }
+
+    .card .card-description {
+        height: 100%;
+        align-items: center;
+    }
+
+    .card .card-description p {
+        color: #ffffff;
+        margin: 10px;
+        font-size: 17px;
+    }
+
+    .footer-container {
+        height: 380px;
+    }
+
+    .footer {
+        padding-top: 250px;
+    }
+
+    .footer ul{
+        flex-direction: row;
+    }
+
+
+    .footer-links ul li a {
+        font-size: 18px;
+        margin: 0 25px;
+    }
+
+    .footer-links ul li a:hover {
+        letter-spacing: 10px;
+    }
+}

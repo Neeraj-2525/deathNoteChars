@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/apple.jpg">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+    <title>Death Note</title>
+</head>
+
+<body>
+    <!-- ***************** NAV BAR *************** -->
+    <div class="nav-bar" style="width: 100%;">
+        <nav>
+            <div class="logo">
+                <h1 class="blood-shadow">DEATH NOTE</h1>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li class="laptop-nav-links"><a href="#">Home</a></li>
+                    <li class="laptop-nav-links"><a href="#">Features</a></li>
+                    <li class="laptop-nav-links"><a href="#">More Anime</a></li>
+                    <li class="laptop-nav-links"><a href="#">Other Characters</a></li>
+                    <li class="nav-collapse-container">
+                        <!-- ********* SLIDING NAVBAR *********** -->
+
+                        <div class="nav-collapse">
+                            <svg onclick="openDropDown(); toggleIcons()" role="img" height="16" width="16"
+                                aria-hidden="true" viewBox="0 0 16 16" class="nav-open-icon" id="open-icon">
+                                <path fill="#FFF"
+                                    d="M15.5 13.5H.5V12h15v1.5zm0-4.75H.5v-1.5h15v1.5zm0-4.75H.5V2.5h15V4z">
+                                </path>
+                            </svg>
+
+                            <svg onclick="toggleIcons(); closeDropDown()" role="img" height="16" width="16"
+                                aria-hidden="true" viewBox="0 0 16 16" style="display: none;" class="nav-collapse-icon"
+                                id="collapse-icon">
+                                <path fill="#FFF"
+                                    d="M1.47 1.47a.75.75 0 0 1 1.06 0L8 6.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L9.06 8l5.47 5.47a.75.75 0 1 1-1.06 1.06L8 9.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L6.94 8 1.47 2.53a.75.75 0 0 1 0-1.06z">
+                                </path>
+                            </svg>
+                        </div>
+                        
+                        <div class="on-click-nav-collapse" id="onClickNavId">
+                            <ul>
+                                <div class="collapse-items">
+                                    <li>
+                                        <span>Home</span>
+                                        <svg role="img" height="16" width="16" aria-hidden="true"
+                                            aria-label="External link" viewBox="0 0 16 16" data-encore-id="icon"
+                                            class="link-icon">
+                                            <path
+                                                d="M1 2.75A.75.75 0 0 1 1.75 2H7v1.5H2.5v11h10.219V9h1.5v6.25a.75.75 0 0 1-.75.75H1.75a.75.75 0 0 1-.75-.75V2.75z">
+                                            </path>
+                                            <path
+                                                d="M15 1v4.993a.75.75 0 1 1-1.5 0V3.56L8.78 8.28a.75.75 0 0 1-1.06-1.06l4.72-4.72h-2.433a.75.75 0 0 1 0-1.5H15z">
+                                            </path>
+                                        </svg>
+                                    </li>
+                                </div>
+                                <div class="collapse-items">
+                                    <li>
+                                        <span>Features</span>
+                                        <svg role="img" height="16" width="16" aria-hidden="true"
+                                            aria-label="External link" viewBox="0 0 16 16" data-encore-id="icon"
+                                            class="link-icon">
+                                            <path
+                                                d="M1 2.75A.75.75 0 0 1 1.75 2H7v1.5H2.5v11h10.219V9h1.5v6.25a.75.75 0 0 1-.75.75H1.75a.75.75 0 0 1-.75-.75V2.75z">
+                                            </path>
+                                            <path
+                                                d="M15 1v4.993a.75.75 0 1 1-1.5 0V3.56L8.78 8.28a.75.75 0 0 1-1.06-1.06l4.72-4.72h-2.433a.75.75 0 0 1 0-1.5H15z">
+                                            </path>
+                                        </svg>
+                                    </li>
+                                </div>
+                                <div class="collapse-items">
+                                    <li>
+                                        <span>More Anime</span>
+                                        <svg role="img" height="16" width="16" aria-hidden="true"
+                                            aria-label="External link" viewBox="0 0 16 16" data-encore-id="icon"
+                                            class="link-icon">
+                                            <path
+                                                d="M1 2.75A.75.75 0 0 1 1.75 2H7v1.5H2.5v11h10.219V9h1.5v6.25a.75.75 0 0 1-.75.75H1.75a.75.75 0 0 1-.75-.75V2.75z">
+                                            </path>
+                                            <path
+                                                d="M15 1v4.993a.75.75 0 1 1-1.5 0V3.56L8.78 8.28a.75.75 0 0 1-1.06-1.06l4.72-4.72h-2.433a.75.75 0 0 1 0-1.5H15z">
+                                            </path>
+                                        </svg>
+                                    </li>
+                                </div>
+                                <div class="collapse-items">
+                                    <li>
+                                        <span>Other Characters</span>
+                                        <svg role="img" height="16" width="16" aria-hidden="true"
+                                            aria-label="External link" viewBox="0 0 16 16" data-encore-id="icon"
+                                            class="link-icon">
+                                            <path
+                                                d="M1 2.75A.75.75 0 0 1 1.75 2H7v1.5H2.5v11h10.219V9h1.5v6.25a.75.75 0 0 1-.75.75H1.75a.75.75 0 0 1-.75-.75V2.75z">
+                                            </path>
+                                            <path
+                                                d="M15 1v4.993a.75.75 0 1 1-1.5 0V3.56L8.78 8.28a.75.75 0 0 1-1.06-1.06l4.72-4.72h-2.433a.75.75 0 0 1 0-1.5H15z">
+                                            </path>
+                                        </svg>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ****************** MAIN BODY ****************** -->
+    <div class="main">
+        <div class="container">
+            <div class="card-container">
+                <div class="card" id="card1">
+                    <div class="card-img left-img">
+                        <img src="assets/img/Light.jpg" title="Light yagami" alt="Light Yagami">
+                    </div>
+                    <span class="card-description">
+                        <p>
+                            <strong>Light Yagami</strong> (Japanese: 夜神 月 ライト, Hepburn: Yagami Raito) is the main
+                            protagonist of
+                            the
+                            manga series Death Note, created by Tsugumi Ohba and Takeshi Obata. He is portrayed as a
+                            brilliant
+                            but
+                            bored genius who finds the Death Note, an otherworldly supernatural notebook that allows the
+                            user to
+                            kill anyone by knowing their name and face, after it is dropped by the Shinigami Ryuk.
+                        </p>
+                    </span>
+                </div>
+                <div class="card" id="card2">
+                    <div class="card-img right-img">
+                        <img src="assets/img/L.jpg" title="L Lawliet" alt="L Lawliet">
+                    </div>
+                    <span class="card-description">
+                        <p>
+                            <strong>L Lawliet </strong>(Japanese: エル・ローライト, Hepburn: Eru Rōraito), known mononymously as
+                            L,
+                            created
+                            by Tsugumi Ohba and Takeshi Obata. He is an enigmatic, mysterious, and highly-esteemed
+                            international
+                            consulting detective whose true identity and background is kept a secret. He communicates
+                            with law
+                            enforcement agencies only through his equally inexplicable handler/assistant, Watari, who
+                            serves as
+                            his
+                            official liaison with the authorities.
+                        </p>
+                    </span>
+                </div>
+                <div class="card" id="card3">
+                    <div class="card-img left-img">
+                        <img src="assets/img/misa.jpg" title="Misa Amane" alt="Misa Amane">
+                    </div>
+                    <span class="card-description">
+                        <p>
+                            <strong>Misa Amane</strong> (Japanese: 弥 海砂, Hepburn: Amane Misa) is a famous model, Misa
+                            seeks out
+                            Kira
+                            (Light Yagami) as she supports his cause to "cleanse the world of evil". Using her own Death
+                            Note, a
+                            notebook that allows its owner to kill anyone simply by knowing their name and face that she
+                            received
+                            from the Shinigami Rem, Misa does everything she can to aid Light. This includes shortening
+                            her own
+                            lifespan by half, twice, in order to receive the eyes of a Shinigami, giving her the ability
+                            to
+                            learn a
+                            person's name just by looking at their face.
+                        </p>
+                    </span>
+                </div>
+                <div class="card" id="card4">
+                    <div class="card-img right-img">
+                        <img src="assets/img/near.jpg" title="Near" alt="Near">
+                    </div>
+                    <span class="card-description">
+                        <p>
+                            <strong>Near</strong> (Japanese: ニア, Nia) whose real name is Nate River, is the young
+                            detective who
+                            succeeds L by default. He is the head of an organization created to catch Kira, the SPK
+                            (Special
+                            Provision for Kira). A placid character with a sharp tongue, he has white hair and wears
+                            pale
+                            clothes. He constantly plays with toys, building towers of dice and playing cards, and
+                            illustrating
+                            his exposition with small finger puppets and Lego minifigs.He was the person who succeeded
+                            identifying and capturing Light as Kira.
+                        </p>
+                    </span>
+                </div>
+                <div class="card" id="card5">
+                    <div class="card-img left-img">
+                        <img src="assets/img/ryuk.jpg" title="Ryuk" alt="Ryuk">
+                    </div>
+                    <span class="card-description">
+                        <p>
+                            <strong>Ryuk</strong> (Japanese: リューク, Hepburn: Ryūku) is a fictional character in the manga
+                            series
+                            Death Note, created by Tsugumi Ohba and Takeshi Obata. He is a Shinigami that drops a Death
+                            Note, a
+                            notebook that allows the user to kill anyone simply by knowing their name and face, into the
+                            human
+                            world
+                            to find relief from the boredom of his own realm. It is picked up by Light Yagami, a bright
+                            high
+                            school
+                            student who uses it in an attempt to create and rule a utopia cleansed of evil, with him at
+                            the helm
+                            as
+                            a "god".
+                        </p>
+                    </span>
+                </div>
+                <div class="card" id="card6">
+                    <div class="card-img right-img">
+                        <img src="assets/img/rem.jpg" title="Rem" alt="Rem">
+                    </div>
+                    <span class="card-description">
+                        <p>
+                            <strong>Rem</strong> (Japanese: レム, Remu), is the Shinigami who gives Misa Amane one of the
+                            Death
+                            Notes
+                            she had. Like Ryuk, Rem possesses two Death Notes; however, Rem did not get hers through
+                            trickery.
+                            The
+                            Shinigami Gelus, who had fallen in love with Misa, sacrificed himself to kill her destined
+                            murderer.
+                            In
+                            doing so he was reduced to dust, leaving only his Death Note. Rem delivered this Death Note
+                            to Misa,
+                            since it was her life he saved.
+                        </p>
+                    </span>
+                </div>
+                <div class="card" id="card7">
+                    <div class="card-img left-img">
+                        <img src="assets/img/mellow.jpg" title="Mello" alt="Mello">
+                    </div>
+                    <span class="card-description">
+                        <p>
+                            <strong>Mello</strong> (Japanese: メロ, Mero) is the older of L's two successors raised at
+                            Wammy's House, Watari's orphanage for gifted children in Winchester, England. When Roger
+                            asks that Mello and Near work together to capture Kira, Mello refuses, pointing out the
+                            differences between them. He leaves the orphanage soon after and eventually seeks help from
+                            the Mafia.
+                        </p>
+                    </span>
+                </div>
+                <div class="card" id="card8">
+                    <div class="card-img right-img">
+                        <img src="assets/img/Soichiro Yagami.jpg" title="Soichiro Yagami" alt="Soichiro Yagami">
+                    </div>
+                    <span class="card-description">
+                        <p>
+                            <strong>Soichiro Yagami</strong> (Japanese: 夜神 総一郎, Yagami Sōichirō) is a kind man with a
+                            strong sense of justice. He cares greatly for his family and the members of the Japanese
+                            Task Force. He is a serious and responsible man that gains the respect of many. He has a
+                            strong sense of duty, and even after the police stop funding the Kira investigation he
+                            continues trying to solve the case with the Task Force.
+                        </p>
+                    </span>
+                </div>
+                <div class="card" id="card9">
+                    <div class="card-img left-img">
+                        <img src="assets/img/kira2.jpg" title="Teru Mikami" alt="Teru Mikami">
+                    </div>
+                    <span class="card-description">
+                        <p>
+                            <strong></strong> Teru Mikami (Japanese: 魅上 照, Mikami Teru) is a criminal prosecutor chosen
+                            as the Hand of Kira by Light Yagami. Mikami takes ownership of Gelus's Death Note after
+                            Light falls under suspicion of being Kira again, and needs someone to act as Kira without
+                            being given every order. His personality is best described as meticulous, disciplined, and unbending in his convictions.
+                            Mikami's unwavering commitment to justice is his defining trait. He believes in Kira's cause and the elimination of criminals through divine judgment.
+                        </p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-container">
+        <!-- <div class="footer-styling"></div> -->
+        <div class="footer">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Manga</a></li>
+                    <li><a href="#">Mappa Studios</a></li>
+                    <li><a href="#">L Headquarters</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
